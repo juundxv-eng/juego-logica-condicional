@@ -12,7 +12,7 @@ de código antes de que el tiempo se agote.
 
 ## 🚀 Demo en Vivo
 
-🔗 [Jugar ahora](https://juundxv-eng.github.io/juego-logica-condicional/)
+🔗 [Jugar ahora](https://juundxv-eng.github.io/juego-logica-condicional/Index.html)
 
 
 ## ✨ Características
