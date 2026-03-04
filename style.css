@@ -1,0 +1,152 @@
+/* Estilos para EnigmaCode */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+body {
+    font-family: 'Fira Code', monospace;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto glass morphism */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-effect {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Gradiente para texto */
+.gradient-text {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Efecto neón */
+.neon-glow {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.neon-glow:hover {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+}
+
+/* Estilos para opciones */
+.option-btn {
+    background: white;
+    border: 2px solid #e2e8f0;
+    color: #1e293b;
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.dark .option-btn {
+    background: #1f2937;
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+.option-btn:hover {
+    transform: translateY(-2px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.5);
+}
+
+.option-btn.selected {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-color: #3b82f6;
+    color: white;
+}
+
+/* Animaciones para feedback */
+@keyframes correct-flash {
+    0%, 100% { background: linear-gradient(135deg, #10b981, #059669); }
+    50% { background: linear-gradient(135deg, #34d399, #10b981); }
+}
+
+@keyframes incorrect-flash {
+    0%, 100% { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    50% { background: linear-gradient(135deg, #f87171, #ef4444); }
+}
+
+.correct-feedback {
+    animation: correct-flash 0.5s ease !important;
+    color: white !important;
+}
+
+.incorrect-feedback {
+    animation: incorrect-flash 0.5s ease !important;
+    color: white !important;
+}
+
+/* Código */
+#codeDisplay {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    border-left: 3px solid #3b82f6;
+}
+
+/* Barra de tiempo */
+.timer-bar-fill {
+    transition: width 1s linear;
+}
+
+/* Animación fade in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* Feedback message */
+#feedbackMessage {
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+#feedbackMessage.bg-indigo-600 {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+#feedbackMessage.bg-red-600 {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
